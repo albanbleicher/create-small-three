@@ -1,1 +1,13 @@
-# create-small-three
+# create-small-three 🌈
+
+## Setup 🌱
+
+    pnpm install
+
+## Dev 🧑🏽‍💻
+
+    pnpm dev
+
+## Build 🧱
+
+    pnpm build

@@ -1,0 +1,64 @@
+{
+  "name": "create-small-threee",
+  "version": "0.0.5",
+  "description": "quickly bootstrap a three project with useful pre-configured goods",
+  "type": "module",
+  "scripts": {
+    "mrm": "mrm --preset=@albanbl/mrm-preset",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --format=pretty .",
+    "lint:fix": "eslint --fix --format=pretty .",
+    "prepare": "husky install",
+    "format": "prettier --write .",
+    "prepublish": "pnpm build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albanbleicher/create-small-three.git"
+  },
+  "author": "Alban Bleicher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albanbleicher/create-small-three/issues"
+  },
+  "homepage": "https://github.com/albanbleicher/create-small-three#readme",
+  "files": ["src/index.js","src/utils.js"],
+  "bin": {
+    "create-small-three": "src/index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "inquirer": "^9.1.1"
+  },
+  "devDependencies": {
+    "@albanbl/eslint-config": "^1.0.4",
+    "@albanbl/mrm-preset": "^1.0.2",
+    "@types/node": "^18.7.18",
+    "eslint": "^8.23.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+
+  },
+  "eslintConfig": {
+    "extends": [
+      "@albanbl"
+    ]
+  },
+  "lint-staged": {
+    "*": "pnpm eslint --fix"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false,
+    "quoteProps": "consistent",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 100
+  }
+}
