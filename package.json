@@ -1,8 +1,22 @@
 {
-  "name": "create-small-threee",
-  "version": "0.0.5",
-  "description": "quickly bootstrap a three project with useful pre-configured goods",
+  "name": "create-small-three",
   "type": "module",
+  "version": "1.0.0",
+  "description": "quickly bootstrap a three project with useful pre-configured goods",
+  "author": "Alban Bleicher",
+  "license": "ISC",
+  "homepage": "https://github.com/albanbleicher/create-small-three#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albanbleicher/create-small-three.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albanbleicher/create-small-three/issues"
+  },
+  "bin": {
+    "create-small-three": "src/index.js"
+  },
+  "files": ["src/index.js","src/utils.js"],
   "scripts": {
     "mrm": "mrm --preset=@albanbl/mrm-preset",
     "build": "tsc",
@@ -13,20 +27,6 @@
     "prepare": "husky install",
     "format": "prettier --write .",
     "prepublish": "pnpm build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/albanbleicher/create-small-three.git"
-  },
-  "author": "Alban Bleicher",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/albanbleicher/create-small-three/issues"
-  },
-  "homepage": "https://github.com/albanbleicher/create-small-three#readme",
-  "files": ["src/index.js","src/utils.js"],
-  "bin": {
-    "create-small-three": "src/index.js"
   },
   "dependencies": {
     "chalk": "^5.0.1",
@@ -43,13 +43,13 @@
     "typescript": "^4.8.3"
 
   },
+  "lint-staged": {
+    "*": "pnpm eslint --fix"
+  },
   "eslintConfig": {
     "extends": [
       "@albanbl"
     ]
-  },
-  "lint-staged": {
-    "*": "pnpm eslint --fix"
   },
   "prettier": {
     "trailingComma": "es5",
